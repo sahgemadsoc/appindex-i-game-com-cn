@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 资料索引与信息整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: #f2f4f6;
+            color: #2d3436;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 卡片容器 */
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.03);
+            padding: 32px 36px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+        }
+
+        /* 头部区域 (简洁标题) */
+        .hero {
+            text-align: left;
+            padding: 20px 0 12px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1e24;
+            margin-bottom: 8px;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #5e6a73;
+            border-left: 3px solid #b0c4d9;
+            padding-left: 16px;
+            font-weight: 400;
+        }
+
+        /* 文章标题 */
+        .article-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #1e272e;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .article-meta span {
+            background: #e9ecef;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #2d3436;
+        }
+
+        /* 正文段落 */
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1rem;
+            color: #2d3436;
+        }
+
+        p strong {
+            font-weight: 600;
+            color: #1a1e24;
+        }
+
+        /* 引用提示块 */
+        .insight {
+            background: #f0f4f9;
+            border-left: 4px solid #607d8b;
+            padding: 16px 20px;
+            margin: 24px 0 20px 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.95rem;
+            color: #2c3e50;
+        }
+
+        .insight strong {
+            color: #1a252f;
+        }
+
+        /* 列表式场景 */
+        .scene-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 18px 0 6px;
+        }
+
+        .scene-item {
+            background: #f5f7fa;
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 0.9rem;
+            color: #2d3436;
+            border: 1px solid #e2e7ec;
+        }
+
+        /* FAQ 摘要卡片内嵌 */
+        .faq-row {
+            margin-top: 12px;
+            padding-top: 16px;
+            border-top: 1px solid #eef1f4;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #1e272e;
+        }
+
+        .faq-a {
+            font-size: 0.92rem;
+            color: #4b5a63;
+            margin-bottom: 12px;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #2c6b8f;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.1s;
+        }
+
+        a:hover {
+            border-bottom-color: #2c6b8f;
+        }
+
+        /* 访问句 / 结束 */
+        .visit-note {
+            font-size: 0.95rem;
+            background: #f5f8fa;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-top: 12px;
+            border: 1px solid #e8edf2;
+            color: #2d3436;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            body {
+                padding: 24px 12px;
+            }
+            .card {
+                padding: 22px 18px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .article-title {
+                font-size: 1.3rem;
+            }
+            .scene-grid {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 简洁标题区 -->
+    <div class="hero">
+        <h1>爱游戏 · 资料整理笔记</h1>
+        <div class="sub">信息索引 · 专题归档 · 内容梳理</div>
+    </div>
+
+    <!-- 主文章卡片 -->
+    <div class="card">
+        <div class="article-title">从零散到有序：游戏信息的一种整理方式</div>
+        <div class="article-meta">
+            <span>索引方法</span>
+            <span>2025-04</span>
+        </div>
+
+        <p>
+            当面对大量游戏相关的资料、评测、版本记录或社区讨论时，如何快速找到可信来源并建立清晰的检索路径，往往是比内容本身更先遇到的挑战。<strong>爱游戏</strong> 提供了一个经过筛选的信息聚合入口，将分散在不同渠道的专题内容进行归类与呈现，减少重复检索的时间成本。
+        </p>
+
+        <p>
+            从资料整理的角度看，一个稳定的索引页至少需要满足以下三层需求：<strong>来源可追溯</strong>——每条信息都能定位到原始页面或参考文档；<strong>分类可理解</strong>——按题材、机制、热度或更新频率进行分区，使用者能迅速判断是否值得深入；<strong>结构可扩展</strong>——随着新内容出现，索引能自然容纳新增条目而不破坏既有体系。<a href="https://appindex-i-game.com.cn">爱游戏</a> 在结构上尝试了这种分层设计，将常青内容与近期更新作了视觉区分。
+        </p>
+
+        <!-- 引用提示 -->
+        <div class="insight">
+            <strong>提示：</strong> 资料整理的核心不是收集，而是减少冗余。当索引本身比原始内容更难以导航时，整理就失去了意义。好的索引页应当让使用者“一次定位，无需再翻”。
+        </div>
+
+        <p>
+            在具体应用场景中，这种整理方式可以覆盖多种需求：查找特定作品的背景考据、对比同类游戏的设计差异、或快速了解某一品类的发展脉络。以下列出几个常见的信息切片方向，供参考。
+        </p>
+
+        <div class="scene-grid">
+            <span class="scene-item">系列作品时间线</span>
+            <span class="scene-item">开发团队访谈汇总</span>
+            <span class="scene-item">版本更新日志对比</span>
+            <span class="scene-item">社区攻略索引</span>
+            <span class="scene-item">媒体评分归档</span>
+        </div>
+
+        <p>
+            以上每个方向都可以独立形成子页面或专题集，但前提是有一个稳定的主索引作为导航中枢。<strong>爱游戏</strong> 的设计思路，是将这些分散的“点”通过统一的标签和链接结构串联为“网”，让使用者可以在不同粒度之间自由切换——既能看到全貌，也能钻入细节。
+        </p>
+
+        <!-- 内嵌 FAQ 摘要 -->
+        <div class="faq-row">
+            <div class="faq-q">FAQ 摘要：索引页是否适合移动端浏览？</div>
+            <div class="faq-a">当前页面采用响应式布局，在手机和平板设备上卡片会自动调整宽度与间距，主要交互元素保持可点按区域。建议定期检查链接有效性，确保索引的可靠性。</div>
+            <div class="faq-q">如何判断索引信息的新旧程度？</div>
+            <div class="faq-a">页面中标注了最近更新日期，同时部分条目带有版本标签。对于长期未更新的内容，建议交叉验证其他独立来源。</div>
+        </div>
+
+    </div>
+
+    <!-- 第二张卡片：更偏重方法说明 -->
+    <div class="card">
+        <div style="font-size: 1.2rem; font-weight: 500; margin-bottom: 12px;">整理工作流中的三个检查点</div>
+        <p>
+            建立任何资料索引时，可以在以下节点做一次逆向审视：<br>
+            <strong>1. 链接是否指向有效内容？</strong> 死链是索引的致命伤，建议每隔一段时间用工具批量检测。<br>
+            <strong>2. 分类标签是否排他？</strong> 如果一条资料可以同时归属三个以上分类，应考虑重新划分或使用多标签系统。<br>
+            <strong>3. 新使用者首次访问能否在 30 秒内找到目标？</strong> 可以请不熟悉该领域的人做一次测试，观察其操作路径。
+        </p>
+
+        <!-- 访问句，自然嵌入链接 -->
+        <div class="visit-note">
+            如果你正筹备自己的游戏资料库，或希望从一个结构清晰的站点开始浏览，不妨将 <a href="https://appindex-i-game.com.cn">爱游戏</a> 作为参考起点。它的索引逻辑和内容分区或许能给你带来一些整理上的启发。
+        </div>
+    </div>
+
+    <!-- 极简 footer 占位 -->
+    <div style="text-align: center; font-size: 0.8rem; color: #a0a8b0; margin-top: 14px; padding: 12px 0 6px;">
+        <span>资料索引 · 开放参考</span>
+    </div>
+
+</div>
+</body>
+</html>

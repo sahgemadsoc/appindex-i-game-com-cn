@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sahgemadsoc.github.io/appindex-i-game-com-cn/sitemap.xml
