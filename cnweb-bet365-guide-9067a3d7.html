@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bet365 网站介绍 · 快速识别与使用指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f7f4ef;
+            color: #2e2a27;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background-color: #fefcf8;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+            padding: 3rem 2.2rem 2.8rem;
+        }
+        /* hero */
+        .hero {
+            text-align: left;
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #e7e0d6;
+            padding-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+        .hero h1 span {
+            font-weight: 500;
+            background: #ece7df;
+            padding: 0 0.3rem;
+        }
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #5c554b;
+            line-height: 1.6;
+            margin-top: 0.75rem;
+            max-width: 640px;
+        }
+        /* 提示框 */
+        .notice-box {
+            background: #f2eee7;
+            border-left: 5px solid #b3a292;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2.2rem 0 2.5rem;
+            font-size: 1rem;
+        }
+        .notice-box p {
+            margin: 0;
+        }
+        .notice-box a {
+            color: #4b3f33;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.2px;
+            font-weight: 500;
+        }
+        .notice-box a:hover {
+            color: #1f1b17;
+        }
+        /* 一般区块 */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2f2a24;
+            margin: 2rem 0 1.2rem;
+            border-bottom: 1px dashed #ddd6cb;
+            padding-bottom: 0.35rem;
+        }
+        .desc-text {
+            margin-bottom: 1.4rem;
+            font-size: 1rem;
+        }
+        .desc-text strong {
+            font-weight: 600;
+            color: #3b332b;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .feature-item {
+            flex: 1 1 200px;
+            background: #f9f5ef;
+            padding: 1.4rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #e5ddd3;
+            transition: all 0.2s;
+        }
+        .feature-item:hover {
+            background: #f3ede5;
+            border-color: #cbbba9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+        }
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2a231d;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.01em;
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #514940;
+            line-height: 1.5;
+        }
+        /* 引用块 */
+        blockquote {
+            background: #f1ebe3;
+            margin: 2rem 0 1.5rem;
+            padding: 1.2rem 1.8rem;
+            border-radius: 24px 8px 24px 8px;
+            font-style: normal;
+            color: #413a32;
+            border: 1px solid #ded3c6;
+            font-size: 0.98rem;
+        }
+        blockquote p {
+            margin: 0.4rem 0;
+        }
+        blockquote a {
+            color: #3f342b;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        /* faq摘要 */
+        .faq-mini {
+            margin: 2.2rem 0 1.8rem;
+        }
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #ece5db;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #342d26;
+            margin-bottom: 0.2rem;
+        }
+        .faq-a {
+            font-size: 0.95rem;
+            color: #5f554b;
+            line-height: 1.6;
+        }
+        .faq-a a {
+            color: #4f4236;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e0d8cd;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1.8rem;
+            color: #5e5449;
+        }
+        .footer-links a {
+            color: #4b3f33;
+            text-decoration: none;
+            border-bottom: 1px dotted #c9bcaa;
+        }
+        .footer-links a:hover {
+            border-bottom: 1px solid #7c6b59;
+        }
+        .inline-link {
+            color: #4b3f33;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        @media (max-width: 560px) {
+            body { padding: 1rem 0.8rem; }
+            .wrapper { padding: 2rem 1.2rem; }
+            .hero h1 { font-size: 2rem; }
+            .feature-grid { gap: 1rem; }
+            .feature-item { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- hero 区 -->
+    <div class="hero">
+        <h1>这是 <span>bet365</span> 的使用页面</h1>
+        <div class="subhead">
+            一个简洁的指引，帮助你快速辨识网站功能与定位，无需绕路。
+        </div>
+    </div>
+
+    <!-- 优势区 + 提示框混合 -->
+    <div class="notice-box">
+        <p>💡 <strong>快速识别：</strong> 如果你正在寻找一个整合了体育、赛事与线上服务的平台，<a href="https://cnweb-bet365.com">bet365</a> 就是你要找的名字。下面整理了它的特点与常见问题，方便你判断。</p>
+    </div>
+
+    <h2 class="section-title">它解决什么问题</h2>
+    <div class="desc-text">
+        <strong>bet365</strong> 是一个提供线上体育、娱乐及配套服务的综合性站点。许多人第一次接触时，不太确定网站的实际用途，或者想确认信息是否准确。这个页面从最直观的角度列出几点，帮你节省反复查找的时间。
+    </div>
+
+    <!-- 特点卡片 -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>体育覆盖面广</h3>
+            <p>主流联赛、杯赛以及众多非热门项目均有呈现，数据更新节奏稳定。</p>
+        </div>
+        <div class="feature-item">
+            <h3>界面语言适应</h3>
+            <p>针对中文使用者做了界面与内容适配，减少理解门槛。</p>
+        </div>
+        <div class="feature-item">
+            <h3>持续运营</h3>
+            <p>作为长期存在的线上服务之一，bet365 保持着相对稳定的访问与功能迭代。</p>
+        </div>
+        <div class="feature-item">
+            <h3>信息密度适中</h3>
+            <p>页面布局并未堆砌过量内容，核心功能入口相对清晰。</p>
+        </div>
+    </div>
+
+    <!-- 说明区 + 引用 -->
+    <h2 class="section-title">使用场景与判断</h2>
+    <p class="desc-text">
+        无论你是第一次听说还是想再次确认，<a href="https://cnweb-bet365.com" class="inline-link">bet365</a> 的定位始终围绕线上体育与娱乐服务展开。如果你希望快速找到对应的功能板块，建议直接浏览网站首页的导航分类，通常分为体育、赛事、账户管理等几大块。
+    </p>
+    <blockquote>
+        <p>“许多人花大量时间在多个页面之间跳转，只是因为没找到正确的标签页。bet365 的主菜单通常位于页面顶部或侧边，颜色对比明显，留意「体育」「现场」等字样即可。”<br>—— 一位长期使用的用户</p>
+    </blockquote>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见疑问摘要</h2>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">问：bet365 是否只提供单一服务？</div>
+            <div class="faq-a">不完全是。它包含多项内容，但体育是其核心板块之一。建议根据自己需求查看对应分区。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：如何确认当前访问的是正确站点？</div>
+            <div class="faq-a">检查网址是否为 <strong>https://cnweb-bet365.com</strong>，同时留意页面底部的版本或联系信息。也可以通过常用搜索确认。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：网站对新手友好吗？</div>
+            <div class="faq-a">整体设计偏向功能型，初次使用可能需要花几分钟熟悉分类。可借助搜索功能快速定位内容。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接区域 -->
+    <div class="footer-links">
+        <span><a href="https://cnweb-bet365.com">bet365</a> · 直接访问</span>
+        <span>常见问题 · 使用指南</span>
+        <span>更新时间：2025</span>
+        <span style="opacity:0.6;">本页面仅为介绍说明</span>
+    </div>
+</div>
+</body>
+</html>
