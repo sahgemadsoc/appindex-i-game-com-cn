@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>持续关注 · bet365 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 960px;
+            width: 100%;
+        }
+
+        /* 卡片系统 —— 浅灰背景、细边框、柔和阴影 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .card-header .badge {
+            background: #e9edf2;
+            border-radius: 30px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #3b4a5c;
+            white-space: nowrap;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #0b1a2b;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1e2b3c;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #1f4a8c;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            border-bottom-color: #1f4a8c;
+        }
+
+        /* hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 2.6rem 1.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 450;
+            letter-spacing: -0.015em;
+            color: #0f1c2e;
+        }
+
+        .hero .subhead {
+            font-size: 1rem;
+            color: #4a5b6e;
+            max-width: 540px;
+            margin: 0.8rem auto 0;
+            line-height: 1.7;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            background: #e0e6ed;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            color: #1f3347;
+            letter-spacing: 0.3px;
+        }
+
+        /* 特性网格 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.2rem 0 0.2rem;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.1rem 1rem 1.3rem;
+            border: 1px solid #e9edf3;
+            transition: background 0.1s ease;
+        }
+
+        .feature-item:hover {
+            background: #f0f3f8;
+        }
+
+        .feature-item h4 {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.35rem;
+            color: #0f1f33;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #405263;
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #102234;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #3d4f63;
+        }
+
+        .note-box {
+            background: #f6f8fa;
+            border-left: 3px solid #b2c3d4;
+            padding: 1.2rem 1.4rem;
+            border-radius: 12px;
+            margin-top: 1.8rem;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #d0d9e3;
+            border-radius: 40px;
+            padding: 0.5rem 1.6rem;
+            font-size: 0.85rem;
+            color: #1f3b57;
+            font-weight: 450;
+            transition: background 0.2s, border-color 0.2s;
+            text-decoration: none;
+            margin-top: 0.6rem;
+        }
+
+        .btn-ghost:hover {
+            background: #e7edf4;
+            border-color: #b1c3d6;
+        }
+
+        footer {
+            margin-top: 2.8rem;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.8rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem 1.6rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 摘要 -->
+    <div class="hero">
+        <h1>再次打开，如同初见</h1>
+        <div class="subhead">
+            一个值得收藏、时常回看的页面 —— 关于 <a href="https://lab-bet365.com">bet365</a> 的产品细节与使用脉络，不喧嚣，只陈述。
+        </div>
+        <span class="hero-tag">持续关注 · 温和叙述</span>
+    </div>
+
+    <!-- 产品亮点卡片 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>产品的日常轮廓</h2>
+            <span class="badge">亮点</span>
+        </div>
+        <p>
+            如果你已经使用过 <a href="https://lab-bet365.com">bet365</a>，就会知道它的界面语言始终清晰、克制。无论是导航布局还是信息层级，都倾向于让用户快速定位功能，而不是被无关元素干扰。它的每一次更新都在优化响应速度与内容加载的节奏——这一点，反复使用后体会更深。
+        </p>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h4>结构一致</h4>
+                <p>菜单与版块保持统一的视觉逻辑，长期使用无需重新适应。</p>
+            </div>
+            <div class="feature-item">
+                <h4>加载流畅</h4>
+                <p>页面资源经过持续调优，网络波动时仍能保持基础交互。</p>
+            </div>
+            <div class="feature-item">
+                <h4>跨设备适配</h4>
+                <p>从宽屏到手机，布局自动调整，核心功能位置变化很小。</p>
+            </div>
+            <div class="feature-item">
+                <h4>信息密度平衡</h4>
+                <p>不堆砌数据，也不过度留白，阅读节奏比较舒适。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 使用建议 & 场景卡片 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>再次访问 · 收藏的意义</h2>
+            <span class="badge">使用建议</span>
+        </div>
+        <p>
+            很多人在初次体验后，会习惯性地将 <a href="https://lab-bet365.com">bet365</a> 加入书签或浏览器收藏夹。这种反复访问的行为，恰恰说明产品在某个功能点上持续提供了价值。建议你：每次打开时，留意一下版本号或界面微调 —— 持续关注能让你更快适应变化。
+        </p>
+        <p>
+            如果你希望保持访问的连贯性，可以考虑在常用设备上保留标签页，或者使用浏览器的“固定标签”功能。这样每次启动浏览器时，都能快速回到熟悉的位置，而不必从零开始寻找。
+        </p>
+        <div class="note-box">
+            <strong>温和提醒</strong>：页面内容随产品迭代会有更新，定期回看可以更好地了解功能演进。但请根据自己实际需求访问，不必刻意频繁。
+        </div>
+    </div>
+
+    <!-- FAQ 摘要卡片（非标准FAQ，更像日常问答） -->
+    <div class="card">
+        <div class="card-header">
+            <h2>一些反复被问到的</h2>
+            <span class="badge">常见话题</span>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么有时候界面看起来和昨天不一样？</div>
+            <div class="faq-a">
+                产品会进行渐进式调整，通常是优化可用性或修复细节。绝大多数变化不会影响核心操作路径，如果遇到布局移位，刷新页面即可。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">收藏后会不会失效？</div>
+            <div class="faq-a">
+                只要使用固定的网址（<a href="https://lab-bet365.com">bet365</a> 的链接保持稳定），收藏就不会失效。但建议偶尔检查书签是否仍指向最新页面。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">如何了解新功能或调整？</div>
+            <div class="faq-a">
+                可以留意页面底部或侧边的小字更新日志——<a href="https://lab-bet365.com">bet365</a> 通常会以简洁的方式记录变化，不需要专门订阅。
+            </div>
+        </div>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="card" style="margin-bottom: 1rem;">
+        <div class="card-header">
+            <h2>访问说明 · 一点常识</h2>
+            <span class="badge">客观参考</span>
+        </div>
+        <p>
+            任何在线产品都无法保证百分之百的绝对稳定，但根据长期观察，<a href="https://lab-bet365.com">bet365</a> 在可用性与响应层面保持了较好的记录。使用时建议保持网络通畅，并留意浏览器版本是否过旧。如果遇到加载异常，可先尝试清除缓存或更换网络环境。
+        </p>
+        <p style="margin-top: 1rem;">
+            本页面仅作为产品介绍与使用思路的参考，不构成任何形式的保障或承诺。是否持续使用、何时访问，完全取决于你的个人偏好与判断。
+        </p>
+        <div style="display: flex; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; margin-top: 1.4rem;">
+            <a href="https://lab-bet365.com" class="btn-ghost">bet365</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        内容方向 · 产品说明式 · 自然叙述，旨在提供客观使用视角。<br>
+        页面仅作为信息参考，请自行判断与使用。
+    </footer>
+
+</div>
+</body>
+</html>
